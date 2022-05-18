@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include "fileio.h"
-int ReadMap()
+int ReadGame()
 {
     int cell[200][200];
     FILE *fp;
@@ -28,6 +28,10 @@ int ReadMap()
             else
             {
                 cell[i][j] = 1;
+            }
+            else
+            {
+                print("invalid symbols found")//check if the file all contain the correct numbers
             }
         }
         fscanf(fp,"%c",&ch);
